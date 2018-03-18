@@ -21,3 +21,15 @@ C:\Work2018\NetCore2\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API
 C:\Work2018\NetCore2\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.dll
 C:\Work2018\NetCore2\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.pdb
 C:\Work2018\NetCore2\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.csprojResolveAssemblyReference.cache
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\nlog.config
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\Library.API.deps.json
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.json
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.dev.json
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\bin\Debug\netcoreapp2.0\Library.API.pdb
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.csprojResolveAssemblyReference.cache
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.csproj.CoreCompileInputs.cache
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfoInputs.cache
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfo.cs
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\administro\Documents\GitHub\NetCore2RESTfulAPI\Library\src\Library.API\obj\Debug\netcoreapp2.0\Library.API.pdb
