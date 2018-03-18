@@ -7,14 +7,18 @@ The code is compatible to work on any platform.
 If you want to use VS Code, you can use DotNet CLI from the command line:
 
 Open VS Code
+
 Library> code .
 
 For Build from terminal:
+
 Library> dotnet build
 
 For Run from terminal:
+
 Library> dotnet run
 
 Reference:
+
 https://docs.microsoft.com/en-gb/dotnet/core/tools/cli-msbuild-architecture
 
