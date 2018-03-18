@@ -6,13 +6,13 @@ The code is compatible to work on any platform.
 
 If you want to use VS Code, you can use DotNet CLI from the command line:
 
-For Open VS Code
+Open VS Code
 Library> code .
 
-For Build:
+For Build from terminal:
 Library> dotnet build
 
-For Run:
+For Run from terminal:
 Library> dotnet run
 
 Reference:
