@@ -1,13 +1,20 @@
 # NetCore2RESTfulAPI
 Building a truly RESTful API with ASP Net Core 2.
 
+If you want to work with a Cross platform with VS 2017 on Windows, VS Code (Linux or Mac)
+The code is compatible to work on any platform.
 
 If you want to use VS Code, you can use DotNet CLI from the command line:
 
-For Build:
+For Open VS Code
+Library> code .
 
-Library\src\Library.API> dotnet build
+For Build:
+Library> dotnet build
 
 For Run:
+Library> dotnet run
 
-Library\src\Library.API> dotnet run
+Reference:
+https://docs.microsoft.com/en-gb/dotnet/core/tools/cli-msbuild-architecture
+
