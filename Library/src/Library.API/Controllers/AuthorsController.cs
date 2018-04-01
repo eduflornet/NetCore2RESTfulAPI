@@ -222,7 +222,7 @@ namespace Library.API.Controllers
         }
 
 
-        [HttpPost(Name = "CreateAuthorWithDateOfDeath")]
+       /* [HttpPost(Name = "CreateAuthorWithDateOfDeath")]
         [RequestHeaderMatchesMediaType("Content-Type",
             new[] { "application/vnd.marvin.authorwithdateofdeath.full+json",
                     "application/vnd.marvin.authorwithdateofdeath.full+xml" })]
@@ -257,7 +257,7 @@ namespace Library.API.Controllers
             return CreatedAtRoute("GetAuthor",
                 new { id = linkedResourceToReturn["Id"] },
                 linkedResourceToReturn);
-        }
+        }*/
 
         [HttpPost("{id}")]
         public IActionResult BlockAuthorCreation(Guid id)

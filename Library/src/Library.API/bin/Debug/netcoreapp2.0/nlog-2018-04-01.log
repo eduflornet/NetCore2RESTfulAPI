@@ -1,0 +1,89 @@
+2018-04-01 21:03:01.0370|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\edufl\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-04-01 21:03:01.5574|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-04-01 21:03:02.4076|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-04-01 21:03:02.4291|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-04-01 21:03:02.4528|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-04-01 21:03:02.4629|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-04-01 21:03:02.8949|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-04-01 21:03:03.0273|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (59ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-04-01 21:03:03.0946|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (Size = 50), @p6='?', @p7='?', @p8='?', @p9='?' (Size = 50), @p10='?' (Size = 50), @p11='?' (Size = 50), @p12='?', @p13='?', @p14='?', @p15='?' (Size = 50), @p16='?' (Size = 50), @p17='?' (Size = 50), @p18='?', @p19='?', @p20='?', @p21='?' (Size = 50), @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?', @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50), @p30='?', @p31='?', @p32='?', @p33='?' (Size = 50), @p34='?' (Size = 50), @p35='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [DateOfDeath], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5),
+(@p6, @p7, @p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15, @p16, @p17),
+(@p18, @p19, @p20, @p21, @p22, @p23),
+(@p24, @p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34, @p35);
+2018-04-01 21:03:03.1155|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[@p36='?', @p37='?', @p38='?' (Size = 500), @p39='?' (Size = 100), @p40='?', @p41='?', @p42='?' (Size = 500), @p43='?' (Size = 100), @p44='?', @p45='?', @p46='?' (Size = 500), @p47='?' (Size = 100), @p48='?', @p49='?', @p50='?' (Size = 500), @p51='?' (Size = 100), @p52='?', @p53='?', @p54='?' (Size = 500), @p55='?' (Size = 100), @p56='?', @p57='?', @p58='?' (Size = 500), @p59='?' (Size = 100), @p60='?', @p61='?', @p62='?' (Size = 500), @p63='?' (Size = 100), @p64='?', @p65='?', @p66='?' (Size = 500), @p67='?' (Size = 100), @p68='?', @p69='?', @p70='?' (Size = 500), @p71='?' (Size = 100), @p72='?', @p73='?', @p74='?' (Size = 500), @p75='?' (Size = 100), @p76='?', @p77='?', @p78='?' (Size = 500), @p79='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p36, @p37, @p38, @p39),
+(@p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51),
+(@p52, @p53, @p54, @p55),
+(@p56, @p57, @p58, @p59),
+(@p60, @p61, @p62, @p63),
+(@p64, @p65, @p66, @p67),
+(@p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75),
+(@p76, @p77, @p78, @p79);
+2018-04-01 21:03:03.6543|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-04-01 21:03:03.7555|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Checking for conditional GET/HEAD.
+2018-04-01 21:03:03.7599|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Not valid - no If-None-Match or If-Modified-Since headers.
+2018-04-01 21:03:03.7599|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Don't generate 304 - Not Modified.  Continue.
+2018-04-01 21:03:03.7725|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Checking for conditional PUT/PATCH.
+2018-04-01 21:03:03.7725|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Not valid - method isn't PUT or PATCH.
+2018-04-01 21:03:03.7882|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Don't generate 412 - Precondition Failed.  Continue.
+2018-04-01 21:03:03.8764|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Generating expiration headers.
+2018-04-01 21:03:03.8764|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Expiration headers generated. Expires: Sun, 01 Apr 2018 19:13:03 GMT.  Cache-Control: public,max-age=600,must-revalidate.
+2018-04-01 21:03:03.8862|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Generating Validation headers.
+2018-04-01 21:03:03.8985|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Validation headers generated. ETag: E4163F842174474537869242D1D4E628. Last-Modified: Sun, 01 Apr 2018 19:03:03 GMT
+2018-04-01 21:03:03.8985|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Generating Vary header.
+2018-04-01 21:03:03.8985|INFO|Marvin.Cache.Headers.HttpCacheHeadersMiddleware|Vary header generated: Accept, Accept-Language, Accept-Encoding.
+2018-04-01 21:03:03.9296|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 279.863ms 404 
+2018-04-01 21:03:06.2219|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/swagger/  
+2018-04-01 21:03:06.2386|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.3352ms 200 text/html
+2018-04-01 21:03:06.2732|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/swagger/swagger-ui.css  
+2018-04-01 21:03:06.2732|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/swagger/swagger-ui-bundle.js  
+2018-04-01 21:03:06.3042|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui.css was not modified
+2018-04-01 21:03:06.3042|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui-bundle.js was not modified
+2018-04-01 21:03:06.3352|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 81.3491ms 304 text/css
+2018-04-01 21:03:06.3352|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 80.5686ms 304 application/javascript
+2018-04-01 21:03:06.5882|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/swagger/swagger-ui-standalone-preset.js  
+2018-04-01 21:03:06.5882|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui-standalone-preset.js was not modified
+2018-04-01 21:03:06.5882|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 8.8752ms 304 application/javascript
+2018-04-01 21:03:06.6942|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/swagger/v1/swagger.json  
+2018-04-01 21:03:06.9019|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 207.2999ms 200 application/json

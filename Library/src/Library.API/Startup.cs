@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Newtonsoft.Json.Serialization;
 using System.Linq;
 using AspNetCoreRateLimit;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Library.API
 {
@@ -33,18 +34,27 @@ namespace Library.API
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+            services.AddMvcCore()
+                .AddApiExplorer();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "API Library", Version = "v1" });
+            });
+
             services.AddMvc(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true;
                 setupAction.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
                 // setupAction.InputFormatters.Add(new XmlDataContractSerializerInputFormatter());
 
-                var xmlDataContractSerializerInputFormatter = 
+                var xmlDataContractSerializerInputFormatter =
                 new XmlDataContractSerializerInputFormatter();
                 xmlDataContractSerializerInputFormatter.SupportedMediaTypes
                     .Add("application/vnd.marvin.authorwithdateofdeath.full+xml");
                 setupAction.InputFormatters.Add(xmlDataContractSerializerInputFormatter);
-                
+
                 var jsonInputFormatter = setupAction.InputFormatters
                 .OfType<JsonInputFormatter>().FirstOrDefault();
 
@@ -55,7 +65,7 @@ namespace Library.API
                     jsonInputFormatter.SupportedMediaTypes
                     .Add("application/vnd.marvin.authorwithdateofdeath.full+json");
                 }
-                
+
                 var jsonOutputFormatter = setupAction.OutputFormatters
                     .OfType<JsonOutputFormatter>().FirstOrDefault();
 
@@ -98,13 +108,13 @@ namespace Library.API
                 =>
                 {
                     expirationModelOptions.MaxAge = 600;
-                }, 
+                },
                 (validationModelOptions)
                 =>
                 {
                     validationModelOptions.AddMustRevalidate = true;
                 });
-            
+
             services.AddMemoryCache();
 
             services.Configure<IpRateLimitOptions>((options) =>
@@ -131,9 +141,17 @@ namespace Library.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
             ILoggerFactory loggerFactory, LibraryContext libraryContext)
-        {           
+        {
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Library V1");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -156,7 +174,7 @@ namespace Library.API
                         context.Response.StatusCode = 500;
                         await context.Response.WriteAsync("An unexpected fault happened. Try again later.");
 
-                    });                      
+                    });
                 });
             }
 
@@ -180,14 +198,14 @@ namespace Library.API
 
                 cfg.CreateMap<Entities.Book, Models.BookForUpdateDto>();
             });
-            
+
             libraryContext.EnsureSeedDataForContext();
 
             app.UseIpRateLimiting();
 
             app.UseHttpCacheHeaders();
 
-            app.UseMvc(); 
+            app.UseMvc();
         }
     }
 }
